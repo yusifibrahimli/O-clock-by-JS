@@ -1,0 +1,102 @@
+.main{
+	margin: 0 auto;
+	width: 500px;
+	height: 500px;
+	border-radius: 100%;
+	border:30px solid lightblue;
+	background-color: black;
+	box-sizing: border-box;
+	transform: rotate(180deg);
+}
+.merkezSaat{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	margin: 200px auto;
+	background-color: #59DFFF;
+}
+.merkezDeq{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	margin: 0 auto;
+	background-color: #59DFFF;
+	margin-top: -230px;
+
+}
+.merkezSan{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	margin: 0 auto;
+	background-color: #59DFFF;
+	margin-top: -30px;
+
+}
+.eqrebSaat{
+	position: relative;
+	margin: 0 auto;
+	width: 15px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	height: 120px;
+	background-color: lightblue;
+	opacity: 0.9;
+}
+.eqrebDeq{
+	position: relative;
+	margin: 0 auto;
+	width: 15px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	height: 160px;
+	background-color: lightblue;
+	opacity: 0.9;
+	margin-top: -20px;
+}
+.eqrebSan{
+	position: relative;
+	margin: 0 auto;
+	width: 5px;
+	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
+	height: 180px;
+	background-color: lightblue;
+	opacity: 0.9;
+	margin-top: -20px;
+}
+.month{
+	color: lightblue;
+	font-size: 40px;
+	margin-right: 100px;
+	margin-top: -50px;
+	float: right;
+	transform: rotate(180deg);
+}
+.monthDate{
+	color: lightblue;
+	font-size: 40px;
+	float: right;
+	margin-right: -120px;
+	margin-top: -50px;
+	transform: rotate(180deg);
+	
+}
+.week{
+	color: lightblue;
+	font-size: 40px;
+	margin-left: 40px;
+	margin-top: -50px;
+	float: left;
+	transform: rotate(180deg);
+}
+.elctr{
+	font-size: 70px;
+	color: lightblue;
+	transform: rotate(180deg);
+	margin-top: -190px;
+	margin-right: 130px;
+}

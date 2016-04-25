@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<script type="text/javascript">
+
+	var myClock=document.createElement("div");
+	    document.body.appendChild(myClock);
+	    myClock.setAttribute("class", "main");
+
+	var centerHour=document.createElement("div");
+	    myClock.appendChild(centerHour);
+	    centerHour.setAttribute("class", "merkezSaat");
+
+	var mySaat=document.createElement("div");
+	    centerHour.appendChild(mySaat);
+	    mySaat.setAttribute("class", "eqrebSaat");
+
+	var centerMin=document.createElement("div");
+	    myClock.appendChild(centerMin);
+	    centerMin.setAttribute("class", "merkezDeq ");
+
+	var myDeq=document.createElement("div");
+	    centerMin.appendChild(myDeq);
+	    myDeq.setAttribute("class", "eqrebDeq");
+
+	var centerSec=document.createElement("div");
+	    myClock.appendChild(centerSec);
+	    centerSec.setAttribute("class", "merkezSan ");
+
+	var mySan=document.createElement("div");
+	    centerSec.appendChild(mySan);
+	    mySan.setAttribute("class", "eqrebSan");
+
+  var ay=["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"];
+  var hefte=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  var time=new Date();
+
+	var month=document.createElement("p");
+	    myClock.appendChild(month);
+	    month.setAttribute("class", "month");
+
+	var monthDate=document.createElement("p");
+	    myClock.appendChild(monthDate);
+	    monthDate.setAttribute("class", "monthDate");
+      monthDate.innerHTML=time.getDate();
+
+  var week=document.createElement("p");
+      myClock.appendChild(week);
+      week.setAttribute("class", "week");
+
+  var electron= document.createElement("p");
+      myClock.appendChild(electron);
+      electron.setAttribute("class", "elctr");
+      electron.innerHTML=time.getHours()+":"+time.getMinutes();
+      	 if(time.getDay()){
+    	  week.innerHTML=hefte[time.getDay()];
+        }
+
+		if(time.getMonth()){
+	      month.innerHTML=ay[time.getMonth()];
+		}
+
+
+		
+	function timer(){
+		var time=new Date();
+		var saat=(time.getHours()-12)*30;
+		var deq=time.getMinutes()*180/30;
+		var san=time.getSeconds()*180/30;
+		if(time.getHours()){
+			centerHour.style.transform="rotate("+saat+"deg)";
+			centerMin.style.transform="rotate("+deq+"deg)";
+			centerSec.style.transform="rotate("+san+"deg)";
+		}
+		document.getElementsByClassName("elctr")[0].innerHTML=time.getHours()+":"+time.getMinutes();
+	}
+    setInterval(timer, 1000);
+
+
+</script>
+</body>
+</html>
